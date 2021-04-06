@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/xhsindex/xhsindex"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -9,6 +10,15 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle":"black"
   },
+
+  "plugins": {
+    "sdkPlugin": {
+      "version": "3.17.1",
+      "provider": "wxc6b86e382a1e3294"
+    }
+  },
+
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
