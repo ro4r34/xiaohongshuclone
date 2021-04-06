@@ -1,4 +1,4 @@
-// pages/xhsindex/xhsindex.js
+// pages/xhsshow/xhsshow.js
 const app = getApp()
 Page({
 
@@ -6,44 +6,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-    posts:[]
+    clickpost: []
   },
-
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function () {
     const self = this
-    let query = new wx.BaaS.Query()
-    let postBaas = new wx.BaaS.TableObject('xhsc_posts')
-    console.log('here')
-    console.log(postBaas)
+    let postfromIndex = new wx.BaaS.TableObject('xhsc_posts')
 
-    postBaas.find().then(
-      (res) => {
-        console.log('here print postBass res', res)
-        self.setData({
-          posts: res.data.objects
-        }), (err) => {
-          console.log("here we have an err", err)
-        }
-      }
-    )
-
-
-  },
-
-  navigateToShowpage: function (e){
-    console.log("clicjpic", e)
-    let postID = e.currentTarget.dataset.post_id
-    wx.navigateTo({
-      // url: '/pages/confirmation/confirmation',
-      url: '/pages/xhsshow/xhsshow?indexpagePostID={{postID}}',
-
+    /** use record ID to find one line of data */
+    let postID = '606c595afb16800370fdfca8'
+    postfromIndex.get(postID).then(res => {
+      console.log('post id', res)
+      self.setData({
+        clickpost: res.data
+      })
+      console.log('clickpost printout', clickpost)
+    }, err => {
+      // err
     })
-  },
 
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

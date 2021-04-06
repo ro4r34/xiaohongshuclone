@@ -1,0 +1,16 @@
+/* pages/xhsshow/xhsshow.wxss */
+
+
+.card-picture {
+  width: 88px;
+  display: flex;
+}
+
+.card-picture image {
+  position: relative;
+  width: 88px;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
