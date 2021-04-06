@@ -5,7 +5,7 @@
         <view class = "cards" wx:for="{{posts}}" wx:for-item="post">
             <navigator class="nav">
                 <view class="card card-avatar">
-                    <image src="{{post.pictureURL}}" mode="widthFix"></image>
+                    <image src="{{post.pictureURL}}" mode="widthFix" bindtap="navigateToShowpage"></image>
                 </view>
                 
                 <view class="card card-text">
