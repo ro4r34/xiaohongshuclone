@@ -37,9 +37,9 @@ Page({
   navigateToShowpage: function (e){
     console.log("clicjpic", e)
     // let postID = e.currentTarget.dataset.post_id
-    console.log('globalPostID1', app.globalData.globalPostID)
+    // console.log('globalPostID1', app.globalData.globalPostID)
     app.globalData.globalPostID = e.currentTarget.dataset.post_id
-    console.log('globalPostID2', app.globalData.globalPostID)
+    // console.log('globalPostID2', app.globalData.globalPostID)
     wx.navigateTo({
       url: '/pages/xhsshow/xhsshow',
 
