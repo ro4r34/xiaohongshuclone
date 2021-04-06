@@ -36,10 +36,12 @@ Page({
 
   navigateToShowpage: function (e){
     console.log("clicjpic", e)
-    let postID = e.currentTarget.dataset.post_id
+    // let postID = e.currentTarget.dataset.post_id
+    console.log('globalPostID1', app.globalData.globalPostID)
+    app.globalData.globalPostID = e.currentTarget.dataset.post_id
+    console.log('globalPostID2', app.globalData.globalPostID)
     wx.navigateTo({
-      // url: '/pages/confirmation/confirmation',
-      url: '/pages/xhsshow/xhsshow?indexpagePostID={{postID}}',
+      url: '/pages/xhsshow/xhsshow',
 
     })
   },

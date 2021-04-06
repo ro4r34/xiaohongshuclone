@@ -17,7 +17,7 @@ Page({
     let postfromIndex = new wx.BaaS.TableObject('xhsc_posts')
 
     /** use record ID to find one line of data */
-    let postID = '606c595afb16800370fdfca8'
+    let postID = app.globalData.globalPostID
     postfromIndex.get(postID).then(res => {
       console.log('post id', res)
       self.setData({
