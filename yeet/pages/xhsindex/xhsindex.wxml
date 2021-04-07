@@ -1,42 +1,57 @@
 <!--pages/xhsindex/xhsindex.wxml-->
-<view class="background" >
-    <!-- <view class="header">YEEK!!</view>     -->
-    <scroll-view scroll-y style="height: 600px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-        <view class = "cards" wx:for="{{posts}}" wx:for-item="post">
-            <navigator class="nav">
-                <view class="card card-avatar">
-                    <image src="{{post.pictureURL}}" mode="widthFix" bindtap="navigateToShowpage" data-post_id= "{{post.id}}"></image>
-                </view>
-                
-                <view class="card card-text">
-                    <view class="card-title">{{post.title}} | {{post.XHSC_ID}}</view>
-                    <view class="card-content">{{post.description}}</view>
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onClickSearch">SEARCH</view>
+</van-search>
+
+<van-tabs sticky bind:click="onClickTab">
+  <van-tab title="FITNESS">
+    <view class="background" >
+        <!-- <view class="header">YEEK!!</view>     -->
+        <scroll-view scroll-y style="height: 600px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class = "cards" wx:for="{{posts}}" wx:for-item="post">
+                <navigator class="nav">
+                    <view class="card card-avatar">
+                        <image src="{{post.pictureURL}}" mode="widthFix" bindtap="navigateToShowpage" data-post_id= "{{post.id}}"></image>
+                    </view>
                     
-                    <view class="card-bottom">
-                        <view>
-                            <image src="../pageimage/see.png"></image>
-                            <text>1234</text>
-                        </view>
-                        <view>
-                            <image src="../pageimage/comment.png"></image>
-                            <text>50</text>
-                        </view>
-                        <view>
-                            <image src="../pageimage/like.png"></image>
-                            <text>670</text>
+                    <view class="card card-text">
+                        <view class="card-title">{{post.title}} | {{post.XHSC_ID}}</view>
+                        <view class="card-content">{{post.description}}</view>
+                        
+                        <view class="card-bottom">
+                            <view>
+                                <image src="../pageimage/see.png"></image>
+                                <text>1234</text>
+                            </view>
+                            <view>
+                                <image src="../pageimage/comment.png"></image>
+                                <text>50</text>
+                            </view>
+                            <view>
+                                <image src="../pageimage/like.png"></image>
+                                <text>670</text>
+                            </view>
                         </view>
                     </view>
-                </view>
 
-            </navigator>
-            <view class="space"></view>
-        </view>
-    </scroll-view>
-    <!-- <image class="localpic" src="../pageimage/9.png"></image> -->
-    <!-- <view class="localpic" style='background:url(../images/9.png) 100% no-repeat center'></view> -->
-    <!-- <button type="primary">Submit a Story</button> -->
-    <view class="footer">- this is our end -</view>  
-</view>
+                </navigator>
+                <view class="space"></view>
+            </view>
+        </scroll-view>
+        <!-- <image class="localpic" src="../pageimage/9.png"></image> -->
+        <!-- <view class="localpic" style='background:url(../images/9.png) 100% no-repeat center'></view> -->
+        <!-- <button type="primary">Submit a Story</button> -->
+        <view class="footer">- this is our end -</view>  
+    </view>
+  </van-tab>
+  <van-tab title="FASHION">PENDING..</van-tab>
+</van-tabs>
 
 
 

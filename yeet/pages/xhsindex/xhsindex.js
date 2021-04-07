@@ -9,6 +9,14 @@ Page({
     posts:[]
   },
 
+  onClickTab(event) {
+    console.log('printout tab event', event)
+    wx.showToast({
+      title: `Hello ${event.detail.title}`,
+      icon: 'none',
+    });
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -35,7 +43,7 @@ Page({
   },
 
   navigateToShowpage: function (e){
-    console.log("clicjpic", e)
+    console.log("clickpic", e)
     // let postID = e.currentTarget.dataset.post_id
     // console.log('globalPostID1', app.globalData.globalPostID)
     app.globalData.globalPostID = e.currentTarget.dataset.post_id
