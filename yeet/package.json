@@ -1,0 +1,18 @@
+{
+  "lockfileVersion": 1,
+  "dependencies": {
+    "@vant/weapp": "^1.6.8"
+  },
+  "name": "miniprogram",
+  "version": "1.0.0",
+  "description": "abi",
+  "main": "index.js",
+  "devDependencies": {
+    "miniprogram-api-typings": "^3.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
