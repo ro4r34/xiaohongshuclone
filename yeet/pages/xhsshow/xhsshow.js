@@ -23,7 +23,7 @@ Page({
       self.setData({
         clickpost: res.data
       })
-      console.log('clickpost printout', clickpost)
+      console.log('clickpost printout', this.data.clickpost)
     }, err => {
       // err
     })
