@@ -21,6 +21,12 @@
         {
           "name": "pages/xhsshow/xhsshow",
           "pathName": "pages/xhsshow/xhsshow",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/profile/profile",
+          "pathName": "pages/profile/profile",
           "scene": null
         }
       ]

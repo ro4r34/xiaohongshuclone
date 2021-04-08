@@ -13,21 +13,23 @@ App({
     wx.BaaS.init('a3fb2113c0a97830d15b')
 
 
-    
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+  
+    const self = this
+    wx.BaaS.auth.getCurrentUser().then((res)=>{
+      wx.setStorageSync('userInfo', res)
+      self.globalData.userInfo = res
+      },(err)=>{console.log('err', err)}
+    )
 
+    // wx.BaaS.auth.loginWithWechat() // 静默登录
     // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+    // wx.login({
+    //   success: res => {
+    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
+    //   }
+    // })
   },
   globalData: {
-    userInfo: null,
-    globalPostID: null
+   userInfo: wx.getStorageSync('userInfo')
   }
 })

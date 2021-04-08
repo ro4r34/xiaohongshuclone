@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/xhsindex/xhsindex",
-    "pages/xhsshow/xhsshow"
+    "pages/xhsshow/xhsshow",
+    "pages/profile/profile"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

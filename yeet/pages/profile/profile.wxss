@@ -1,0 +1,9 @@
+/* pages/profile/profile.wxss */
+
+.h2 {
+  font-size: 28px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 20rpx;
+  z-index: 100;
+}
