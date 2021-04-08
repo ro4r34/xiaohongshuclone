@@ -6,7 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    posts:[]
+    posts:[],
+    leftList: [],
+    rightList: [],
+    leftHight: 0,
+    rightHight: 0
   },
 
   onClickTab(event) {
@@ -23,7 +27,7 @@ Page({
    */
   onLoad: function (options) {
     const self = this
-    let query = new wx.BaaS.Query()
+    // let query = new wx.BaaS.Query()
     let postBaas = new wx.BaaS.TableObject('xhsc_posts')
     console.log('here')
     console.log(postBaas)
@@ -33,11 +37,32 @@ Page({
         console.log('here print postBass res', res)
         self.setData({
           posts: res.data.objects
-        }), (err) => {
-          console.log("here we have an err", err)
-        }
+        }) 
+        console.log('lalala', self.data.posts);
+      }, 
+      (err) => {
+        console.log("here we have an err", err)
       }
     )
+    console.log('bababa', self.data.posts);
+
+    // var leftH = self.data.leftHight;
+    // var rightH = self.data.rightHight;
+    // var leftData = [];
+    // var rightData = [];
+
+    for (let i = 0; i < self.data.posts.length; i++) {
+      console.log('post i test', i, self.data.posts[i]);
+      // var currentItemHeight = parseInt(Math.round(posts[i].CoverHeight * 345 / allData[i].CoverWidth));
+      // allData[i].CoverHeight = currentItemHeight + "rpx";//因为xml文件中直接引用的该值作为高度，所以添加对应单位
+      // if (leftH == rightH || leftH < rightH) {//判断左右两侧当前的累计高度，来确定item应该放置在左边还是右边
+      //   leftData.push(allData[i]);
+      //   leftH += currentItemHeight;
+      // } else {
+      //   rightData.push(allData[i]);
+      //   rightH += currentItemHeight;
+      // }
+    }
 
 
   },
