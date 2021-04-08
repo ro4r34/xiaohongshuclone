@@ -9,8 +9,6 @@ Page({
     posts:[],
     leftList: [],
     rightList: [],
-    leftHight: 0,
-    rightHight: 0
   },
 
   onClickTab(event) {
@@ -39,33 +37,38 @@ Page({
           posts: res.data.objects
         }) 
         console.log('lalala', self.data.posts);
+        var leftData = [];
+        var rightData = [];
+
+        for (let i = 0; i < self.data.posts.length; i++) {
+          console.log('post i test', i, self.data.posts[i]);
+          if (i%2 == 0) {
+            leftData.push(self.data.posts[i]);
+          } else {
+            rightData.push(self.data.posts[i]);           
+          }
+
+        }
+        self.setData({
+          leftList: leftData,
+          rightList: rightData
+        })
+
+
       }, 
       (err) => {
         console.log("here we have an err", err)
       }
     )
-    console.log('bababa', self.data.posts);
-
-    // var leftH = self.data.leftHight;
-    // var rightH = self.data.rightHight;
-    // var leftData = [];
-    // var rightData = [];
-
-    for (let i = 0; i < self.data.posts.length; i++) {
-      console.log('post i test', i, self.data.posts[i]);
-      // var currentItemHeight = parseInt(Math.round(posts[i].CoverHeight * 345 / allData[i].CoverWidth));
-      // allData[i].CoverHeight = currentItemHeight + "rpx";//因为xml文件中直接引用的该值作为高度，所以添加对应单位
-      // if (leftH == rightH || leftH < rightH) {//判断左右两侧当前的累计高度，来确定item应该放置在左边还是右边
-      //   leftData.push(allData[i]);
-      //   leftH += currentItemHeight;
-      // } else {
-      //   rightData.push(allData[i]);
-      //   rightH += currentItemHeight;
-      // }
-    }
-
-
+    // self.setData({
+    //   leftList: leftData,
+    //   rightList: rightData
+    // })
+    // for (let i = 0; i < self.data.leftList.length; i++) {
+    //   console.log()
+    // }
   },
+
 
   navigateToShowpage: function (e){
     console.log("clickpic", e)

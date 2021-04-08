@@ -1,6 +1,5 @@
 <!--pages/xhsindex/xhsindex.wxml-->
 
-
 <van-search
   value="{{ value }}"
   placeholder="请输入搜索关键词"
@@ -11,8 +10,9 @@
   <view slot="action" bind:tap="onClickSearch">SEARCH</view>
 </van-search>
 
-<van-tabs sticky bind:click="onClickTab">
+<van-tabs color="#000000" sticky bind:click="onClickTab">
   <van-tab title="FITNESS">
+   
     <view class="background" >
         <!-- <view class="header">YEEK!!</view>     -->
         <scroll-view scroll-y style="height: 600px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
@@ -52,7 +52,29 @@
         <view class="footer">- this is our end -</view>  
     </view>
   </van-tab>
-  <van-tab title="FASHION">PENDING..</van-tab>
+  <van-tab title="FASHION">PENDING..
+    <view class="content">
+        <view class="left">
+            <block wx:for="{{leftList}}" wx:for-item="lfpost">
+                <image class="pic" src="{{lfpost.pictureURL}}" mode="widthFix" bindtap="navigateToShowpage" data-post_id= "{{lfpost.id}}"></image>
+                <view class="card-title">{{lfpost.title}} | {{lfpost.XHSC_ID}}</view>
+                <view class="card-content">{{lfpost.description}}</view>
+                <view class="space"></view>
+            </block>
+        </view>
+        <view class='right'>
+            <block wx:for="{{rightList}}" wx:for-item="rgpost">
+                <image class='pic' src="{{rgpost.pictureURL}}" mode="widthFix" bindtap="navigateToShowpage" data-post_id= "{{rgpost.id}}"></image>
+                <view class="card-title">{{rgpost.title}} | {{rgpost.XHSC_ID}}</view>
+                <view class="card-content">{{rgpost.description}}</view>
+                <view class="space"></view>
+            </block>
+        </view>
+    </view>
+
+
+
+  </van-tab>
 </van-tabs>
 
 
