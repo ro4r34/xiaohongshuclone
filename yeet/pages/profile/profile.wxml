@@ -1,0 +1,19 @@
+<!--pages/profile/profile.wxml-->
+
+<block wx:if = "{{currentUser}}">
+
+  <van-image
+  round
+  width="10rem"
+  height="10rem"
+  src = '{{currentUser.avatar}}'
+/>
+<view class= "h2"> {{currentUser.nickname}}</view>
+<view class= "subtitle"> Date Joined:  </view>
+</block>
+
+
+<block wx:else>
+  <button style="border-radius: 50px;" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">微信 Login</button>
+</block>
+
