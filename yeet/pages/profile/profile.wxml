@@ -1,19 +1,32 @@
 <!--pages/profile/profile.wxml-->
 
 <block wx:if = "{{currentUser}}">
-
-  <van-image
+<view class="userSection">
+  <van-image class="userinfo-avatar"
   round
-  width="10rem"
-  height="10rem"
+  width="5rem"
+  height="5rem"
   src = '{{currentUser.avatar}}'
 />
+<view class="userInfo">
 <view class= "h2"> {{currentUser.nickname}}</view>
 <view class= "subtitle"> Date Joined:  </view>
+<view class= "subtitle"> Slash ID:  {{currentUser.id}} </view>
+</view>
+</view>
+
+
+<van-tabs color = "#000" sticky>
+  <van-tab title="我的笔记">我的笔记</van-tab>
+  <van-tab title="收藏内容">收藏内容</van-tab>
+
+</van-tabs>
+
 </block>
 
 
 <block wx:else>
   <button style="border-radius: 50px;" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">微信 Login</button>
 </block>
+
 

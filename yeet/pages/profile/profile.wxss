@@ -1,9 +1,31 @@
 /* pages/profile/profile.wxss */
 
 .h2 {
-  font-size: 28px;
+  font-size: 24px;
   color: #000;
   font-weight: bold;
-  margin-top: 20rpx;
+  margin-top: 18rpx;
   z-index: 100;
+}
+
+.userSection{
+display: flex;
+flex-direction: row;
+margin: 40rpx;
+border-radius: 15px;
+background-color: #e5e5e5;
+}
+
+
+
+.userInfo {
+display: flex;
+flex-direction: column;
+position: absolute;
+left: 120px;
+align-items: flex-start;
+}
+
+.subtitle {
+  color: #b1b1b1;
 }
