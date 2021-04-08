@@ -15,7 +15,7 @@
         <!-- <view class="header">YEEK!!</view>     -->
         <scroll-view scroll-y style="height: 600px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
             <view class = "cards" wx:for="{{posts}}" wx:for-item="post">
-                <navigator class="nav">
+                <view class="nav">
                     <view class="card card-avatar">
                         <image src="{{post.pictureURL}}" mode="widthFix" bindtap="navigateToShowpage" data-post_id= "{{post.id}}"></image>
                     </view>
@@ -40,7 +40,7 @@
                         </view>
                     </view>
 
-                </navigator>
+                </view>
                 <view class="space"></view>
             </view>
         </scroll-view>
