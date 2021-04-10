@@ -1,11 +1,17 @@
 <!--pages/xhsshow/xhsshow.wxml-->
 <view class="background" >
   <view class="card-picture">
-    <image src="{{clickpost.pictureURL}}" mode="widthFix"></image>
+    <image src="{{clickpost.pictureURL}}"></image>
   </view>
   <view class="card card-text">
-    <view class="card-title">{{clickpost.title}} | {{clickpost.XHSC_ID}}</view>
+    <view class="card-title">{{clickpost.title}} | {{clickpost.XHSC_ID}} <image src="../pageimage/like.png" class="btnbtn"></image> 
+    </view>
     <view class="card-content">{{clickpost.description}}</view>
+  </view>
+  <view class="card card-text">
+    <view class="comments-title">Comments:</view>
+    <!-- <view>this should be comments section</view> wx:for="{{postcomments}}" wx:for-item="commenttttt"-->
+    <view wx:for="{{postcomments}}" class="commentssection">{{postcomments[0].comment}}</view>
   </view>
 </view>
 

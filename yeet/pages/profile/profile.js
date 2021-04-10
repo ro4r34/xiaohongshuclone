@@ -30,6 +30,7 @@ Page({
             currentUser: res
         })
         wx.setStorageSync('userInfo', res)
+        // console.log(this.data.currentUser.id)
       }, (err) => {
         console.log('err',err)
       }

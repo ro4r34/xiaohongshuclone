@@ -89,7 +89,9 @@
   color: #646566;
   font-size: 28rpx;
   display: -webkit-box;
+  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  word-break: break-all;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 20rpx;
@@ -117,4 +119,45 @@
 }
 .card-bottom text {
   line-height: 35rpx;
+}
+
+
+
+
+
+
+
+
+
+
+/* page{
+  width: 100%;
+  margin: 0;
+  background: #F2F2F2;
+} */
+.content{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+  overflow: hidden;
+}
+
+.left{
+  width: 345rpx;
+}
+
+.right{
+  width: 345rpx;
+  margin-left: 20rpx;
+}
+
+.pic{
+  border-radius: 10rpx;
+  width: 345rpx;
+}
+
+.space {
+  width: 100%;
+  height: 40rpx;
+  background-color: white;
 }

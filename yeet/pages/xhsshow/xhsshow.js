@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    clickpost: []
+    clickpost: [],
+    postcomments:[],
   },
 
   /**
@@ -15,11 +16,14 @@ Page({
   onLoad: function () {
     const self = this
     let postfromIndex = new wx.BaaS.TableObject('xhsc_posts')
+    let commentfromPost = new wx.BaaS.TableObject('xhsc_comments')
 
     /** use record ID to find one line of data */
     let postID = app.globalData.globalPostID
     postfromIndex.get(postID).then(res => {
       console.log('post id', res)
+      console.log('check post id', postID)
+
       self.setData({
         clickpost: res.data
       })
@@ -27,55 +31,49 @@ Page({
     }, err => {
       // err
     })
+    
+    let query = new wx.BaaS.Query()
+    query.compare('post_id','=',postID)
+    commentfromPost.setQuery(query).find().then(
+        (res) => {
+          console.log("weeee", res)
+          self.setData({
+            postcomments: res.data.objects
+          })
+          console.log("yeeeeeet", this.data.postcomments)
+        }
+    )
+    // console.log("yayayaya", this.data.postcomments)
+  // let Posts = new wx.BaaS.TableObject('xhsc_posts')
+  //   let Likes = new wx.BaaS.TableObject('xhsc_likes')
+  //   let query = new wx.BaaS.Query()
 
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //   let currentId = this.data.currentUser.id
+  //   let self = this
+  //   console.log(currentId)
+  //   query.compare('xhsc_id','=',currentId.toString()) // not sure which id should be queried, waiting for post page to be built
+  //   Posts.setQuery(query).find().then(
+  //     (res) => {
+  //       self.setData({
+  //         myPosts: res.data.objects
+  //       })
+  //       // console.log(this.data.myPosts)
+  //     }
+  //   )
+  // onShow: function () {
+  //   // var query = new wx.BaaS.Query()
+  //   // var Customer = new wx.BaaS.TableObject('customer')
+  //   // var Order = new wx.BaaS.TableObject('order')
+  //   // var User = new wx.BaaS.User()
+    
+  //   // query.compare('customer', '=', Customer.getWithoutData('5bad87ab0769797b4fb27a1b'))
+  //   // query.compare('user', '=', User.getWithoutData(69147880))
+  //   // Order.setQuery(query).expand(['customer', 'user']).find().then(res => {
+    
+  //   // })
+  //   const self = this
+  //   let commentsfromPost = new wx.BaaS.TableObject('xhsc_comments')
+    
   }
+
 })
