@@ -89,7 +89,9 @@
   color: #646566;
   font-size: 28rpx;
   display: -webkit-box;
+  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  word-break: break-all;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 20rpx;
