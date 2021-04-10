@@ -42,7 +42,7 @@ Page({
       (res) => {
         console.log('here print postBass res', res)
         self.setData({
-          posts: res.data.objects
+          posts: res.data.objects.reverse()
         }) 
         console.log('lalala', self.data.posts);
         var leftData = [];
@@ -152,7 +152,7 @@ Page({
     // Toast('搜索' + this.data.value);
   },
   onClickSearch() {
-    
+
     wx.showToast({
       title: `SEARCHING ${this.data.value}`,
       icon: 'none',
