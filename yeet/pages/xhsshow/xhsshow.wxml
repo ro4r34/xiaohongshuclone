@@ -4,7 +4,7 @@
     <image src="{{clickpost.pictureURL}}" mode="widthFix"></image>
   </view>
   <view class="card card-text">
-    <view class="card-title">{{clickpost.title}} | {{clickpost.XHSC_ID}} <image src="../pageimage/like.png" class="btnbtn"></image> 
+    <view class="card-title">{{clickpost.title}}<image src="../pageimage/like.png" class="btnbtn"></image> 
     </view>
     <view class="card-content">{{clickpost.description}}</view>
   </view>

@@ -34,6 +34,7 @@
   height: 15px;
   position: relative;
   align-content: right;
+  margin-left: 1em;
 }
 
 .texttext{

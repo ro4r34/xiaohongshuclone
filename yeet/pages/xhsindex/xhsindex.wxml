@@ -11,7 +11,6 @@
     <view slot="action" bindtap="onClickSearch">SEARCH</view>
     </van-search>
 </van-sticky>
-
 <van-tabs sticky color="#000000" bind:click="onClickTab">
   <van-tab title="SIMPLE VERSION">
    <view class="content">
@@ -19,7 +18,7 @@
             <block wx:for="{{leftList}}" wx:for-item="lfpost">
                 <view class="card-background">
                     <image class="pic" src="{{lfpost.pictureURL}}" mode="widthFix" bindtap="navigateToShowpage" data-post_id= "{{lfpost.id}}"></image>
-                    <view class="card-title">{{lfpost.title}} | {{lfpost.XHSC_ID}}</view>
+                    <view class="card-title">{{lfpost.title}}</view>
                     <view class="card-content">{{lfpost.description}}</view>
                     <view class="card-bottom">
                             <view>
@@ -42,7 +41,7 @@
         <view class='right'>
             <block wx:for="{{rightList}}" wx:for-item="rgpost">
                 <image class='pic' src="{{rgpost.pictureURL}}" mode="widthFix" bindtap="navigateToShowpage" data-post_id= "{{rgpost.id}}"></image>
-                <view class="card-title">{{rgpost.title}} | {{rgpost.XHSC_ID}}</view>
+                <view class="card-title">{{rgpost.title}}</view>
                 <view class="card-content">{{rgpost.description}}</view>
                 <view class="card-bottom">
                             <view>
@@ -64,7 +63,7 @@
     </view>
   </van-tab>
   <van-tab title="CLASSIC VERSION">
-         
+
     <view class="background" >
         <!-- <view class="header">YEEK!!</view>     -->
         <scroll-view scroll-y style="height: 600px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
@@ -75,7 +74,7 @@
                     </view>
                     
                     <view class="card card-text">
-                        <view class="card-title">{{post.title}} | {{post.XHSC_ID}}</view>
+                        <view class="card-title">{{post.title}}</view>
                         <view class="card-content">{{post.description}}</view>
                         
                         <view class="card-bottom">
