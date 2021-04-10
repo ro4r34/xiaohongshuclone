@@ -1,0 +1,22 @@
+<!--pages/post/post.wxml-->
+<form class="container" bindsubmit="formSubmit" bindreset="formReset">
+  <view class= "h2">Add a post</view>
+  <view class="section">
+    <view class= "h3">Title</view>
+    <input bindinput="bindTitleInput" name="title" placeholder="Add a title" />
+  </view>
+  <view class="section">
+    <view class= "h3">Description</view>
+    <textarea bindinput="bindDescription" name="description" placeholder="Write your post here"></textarea>
+  </view>
+  <view class="photoPreview">
+  <image style=" height: 100px; width: 100px;" wx:for="{{imageURL}}" src="{{item}}" bindtap="previewMyImages" data-url="{{item}}"> </image>
+  <view class="photoUpload" bindtap="uploadImage"> + </view>
+  </view>
+
+
+  <view class="btn-area">
+    <button form-type="submit">Submit</button>
+    <button form-type="reset">Reset</button>
+  </view>
+</form>

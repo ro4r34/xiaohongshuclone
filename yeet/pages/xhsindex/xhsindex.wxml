@@ -11,6 +11,7 @@
   <view slot="action" bind:tap="onClickSearch">SEARCH</view>
 </van-search>
 
+
 <van-tabs sticky bind:click="onClickTab">
   <van-tab title="FITNESS">
     <view class="background" >

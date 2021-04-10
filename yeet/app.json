@@ -4,9 +4,29 @@
     "pages/logs/logs",
     "pages/xhsindex/xhsindex",
     "pages/xhsshow/xhsshow",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/post/post"
     
   ],
+
+  "tabBar": {
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/xhsindex/xhsindex",
+        "iconPath": "/pages/pageimage/home-outlined.png",
+        "selectedIconPath": "/pages/pageimage/home-filled.png",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "/pages/pageimage/profile-outlined.png",
+        "selectedIconPath": "/pages/pageimage/profile-filled.png",
+        "text": "Profile"
+      }
+    ]
+  },
+
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
