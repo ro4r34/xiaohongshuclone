@@ -1,0 +1,36 @@
+/* pages/post/post.wxss */
+.container{
+  display:  flex;
+  padding: 40rpx 0;
+}
+
+.h2 {
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+}
+.photoPreview{
+ display: flex;
+ flex-direction: row;
+ justify-items: center;
+ margin: 15px 0;
+}
+.photoUpload{
+  height: 100px;
+  width: 100px;
+  background-color: rgb(225,225,225);
+  color: rgb(200,200,200);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+ 
+
+}
+.h3 {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 20rpx;
+  z-index: 100;
+}

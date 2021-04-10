@@ -11,7 +11,8 @@
     <view slot="action" bindtap="onClickSearch">SEARCH</view>
     </van-search>
 </van-sticky>
-
+<van-tabs sticky bind:click="onClickTab">
+  <van-tab title="FITNESS">
 <van-tabs sticky color="#000000" bind:click="onClickTab">
   <van-tab title="SIMPLE VERSION">
    <view class="content">
@@ -64,7 +65,7 @@
     </view>
   </van-tab>
   <van-tab title="CLASSIC VERSION">
-         
+
     <view class="background" >
         <!-- <view class="header">YEEK!!</view>     -->
         <scroll-view scroll-y style="height: 600px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
