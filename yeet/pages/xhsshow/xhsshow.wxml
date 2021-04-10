@@ -1,7 +1,7 @@
 <!--pages/xhsshow/xhsshow.wxml-->
 <view class="background" >
   <view class="card-picture">
-    <image src="{{clickpost.pictureURL}}"></image>
+    <image src="{{clickpost.pictureURL}}" mode="widthFix"></image>
   </view>
   <view class="card card-text">
     <view class="card-title">{{clickpost.title}} | {{clickpost.XHSC_ID}} <image src="../pageimage/like.png" class="btnbtn"></image> 
