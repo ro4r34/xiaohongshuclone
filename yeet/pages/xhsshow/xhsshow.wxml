@@ -11,7 +11,10 @@
   <view class="card card-text">
     <view class="comments-title">Comments:</view>
     <!-- <view>this should be comments section</view> wx:for="{{postcomments}}" wx:for-item="commenttttt"-->
-    <view wx:for="{{postcomments}}" class="commentssection">{{postcomments[0].comment}}</view>
+    <view wx:for="{{postcomments}}" class="commentssection">{{postcomments[0].comment}}
+    <view class="space"></view>
+    </view>
+
   </view>
 </view>
 
