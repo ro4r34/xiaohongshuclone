@@ -18,7 +18,7 @@
             <block wx:for="{{leftList}}" wx:for-item="lfpost">
                 <view class="card-background">
                     <image class="pic" src="{{lfpost.pictureURL}}" mode="widthFix" bindtap="navigateToShowpage" data-post_id= "{{lfpost.id}}"></image>
-                    <view class="card-title">{{lfpost.title}} | {{lfpost.XHSC_ID}}</view>
+                    <view class="card-title">{{lfpost.title}}</view>
                     <view class="card-content">{{lfpost.description}}</view>
                     <view class="card-bottom">
                             <view>
@@ -41,7 +41,7 @@
         <view class='right'>
             <block wx:for="{{rightList}}" wx:for-item="rgpost">
                 <image class='pic' src="{{rgpost.pictureURL}}" mode="widthFix" bindtap="navigateToShowpage" data-post_id= "{{rgpost.id}}"></image>
-                <view class="card-title">{{rgpost.title}} | {{rgpost.XHSC_ID}}</view>
+                <view class="card-title">{{rgpost.title}}</view>
                 <view class="card-content">{{rgpost.description}}</view>
                 <view class="card-bottom">
                             <view>
@@ -74,7 +74,7 @@
                     </view>
                     
                     <view class="card card-text">
-                        <view class="card-title">{{post.title}} | {{post.XHSC_ID}}</view>
+                        <view class="card-title">{{post.title}}</view>
                         <view class="card-content">{{post.description}}</view>
                         
                         <view class="card-bottom">
