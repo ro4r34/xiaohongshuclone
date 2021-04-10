@@ -44,3 +44,9 @@
 .commentssection{
   margin-inline: 3px;
 }
+
+.space {
+  width: 100%;
+  height: 40rpx;
+  background-color: white;
+}

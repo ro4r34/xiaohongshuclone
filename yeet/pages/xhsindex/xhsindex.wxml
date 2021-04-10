@@ -25,14 +25,14 @@
                                 <image src="../pageimage/see.png"></image>
                                 <text>{{lfpost.count_view}}</text>
                             </view>
-                            <view>
+                            <!-- <view>
                                 <image src="../pageimage/comment.png"></image>
                                 <text>1</text>
                             </view>
                             <view>
                                 <image src="../pageimage/like.png"></image>
                                 <text>1</text>
-                            </view>
+                            </view> -->
                         </view>
                     </view>
                 <view class="space"></view>
@@ -48,14 +48,14 @@
                                 <image src="../pageimage/see.png"></image>
                                 <text>1</text>
                             </view>
-                            <view>
+                            <!-- <view>
                                 <image src="../pageimage/comment.png"></image>
                                 <text>1</text>
                             </view>
                             <view>
                                 <image src="../pageimage/like.png"></image>
                                 <text>0</text>
-                            </view>
+                            </view> -->
                         </view>
                 <view class="space"></view>
             </block>
