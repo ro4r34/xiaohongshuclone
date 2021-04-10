@@ -38,7 +38,7 @@ Page({
     console.log('here')
     console.log(postBaas)
 
-    postBaas.find().then(
+    postBaas.limit(100).find().then(
       (res) => {
         console.log('here print postBass res', res)
         self.setData({
